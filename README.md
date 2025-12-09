@@ -67,12 +67,12 @@ Incorrect! Lives left: 5
       |
       |
 =========
-
-Guess a letter: e
-Correct!
 _ e _ _ _
-...
+Letters Not in The Word: A 
+Guess a letter:
 
+...
+---
 ## 👥 Authors
 
 [cite_start]Prepared by[cite: 3]:
