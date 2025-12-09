@@ -4,22 +4,24 @@ A classic implementation of the Hangman word-guessing game, built entirely using
 
 ## 📖 Overview
 
-Terminal Hangman is an interactive CLI (Command Line Interface) game where players attempt to guess a hidden word one letter at a time. [cite_start]The game features a dynamic ASCII art display that updates with every incorrect guess, simulating the traditional pen-and-paper experience directly in your terminal[cite: 1, 10].
+Terminal Hangman is an interactive CLI (Command Line Interface) game where players attempt to guess a hidden word one letter at a time.  
+The game features a dynamic ASCII art display that updates with every incorrect guess, simulating the traditional pen-and-paper experience directly in your terminal.
 
 ## ✨ Features
 
-- [cite_start]**Interactive Gameplay:** Real-time input validation and feedback[cite: 117].
-- [cite_start]**Dynamic ASCII Art:** Reads and parses visual stages from an external `graphics.txt` file[cite: 45].
-- [cite_start]**Tech-Themed Wordbank:** Guess words related to Operating Systems and Linux (e.g., KERNEL, UBUNTU, FIREWALL)[cite: 223].
-- [cite_start]**Win Rate Tracking:** Calculates and displays your success percentage at the end of the session[cite: 187].
-- [cite_start]**Replay Mechanism:** Allows continuous play without restarting the script[cite: 80].
+- **Interactive Gameplay:** Real-time input validation and feedback.
+- **Dynamic ASCII Art:** Reads and parses visual stages from an external `graphics.txt` file.
+- **Tech-Themed Wordbank:** Guess words related to Operating Systems and Linux (e.g., KERNEL, UBUNTU, FIREWALL).
+- **Win Rate Tracking:** Calculates and displays your success percentage at the end of the session.
+- **Replay Mechanism:** Allows continuous play without restarting the script.
 
 ## 📂 Project Structure
 
-[cite_start]The project consists of two main files[cite: 45]:
+The project consists of two main files:
 
-1.  **`hangman.sh`**: The main executable script containing the game loop, logic, and input handling.
-2.  **`graphics.txt`**: A resource file containing 7 stages of ASCII art (70 lines total). [cite_start]The script uses `head` and `tail` commands to extract the specific frame based on the player's remaining lives [cite: 72-74].
+1. **`Hangman_Bash_Game.sh`**: The main executable script containing the game loop, logic, and input handling.
+2. **`graphics.txt`**: A resource file containing 7 stages of ASCII art (70 lines total).  
+   The script uses `head` and `tail` commands to extract the specific frame based on the player's remaining lives.
 
 ## 🚀 How to Run
 
@@ -27,26 +29,49 @@ Terminal Hangman is an interactive CLI (Command Line Interface) game where playe
 - A Linux/Unix-based terminal (Bash shell).
 
 ### Installation & Execution
-1.  Clone this repository or download the files.
-2.  Ensure both `hangman.sh` and `graphics.txt` are in the same directory.
-3.  Give execution permission to the script:
+1. Clone this repository or download the files.
+2. Ensure both `Hangman_Bash_Game.sh` and `graphics.txt` are in the same directory.
+3. Give execution permission to the script:
     ```bash
-    chmod +x hangman.sh
+    chmod +x Hangman_Bash_Game.sh
     ```
-4.  Run the game:
+4. Run the game:
     ```bash
-    ./hangman.sh
+    ./Hangman_Bash_Game.sh
     ```
+
+> ⚠️ **Note for Windows users:** You might see a Git warning about LF ↔ CRLF. This is normal and does not affect the game. You can safely ignore it or convert line endings using `dos2unix`.
 
 ## 🎮 Game Rules
 
-1.  The game selects a random word (represented by underscores `_`).
-2.  [cite_start]You start with **6 attempts**[cite: 90].
-3.  Type a letter and press Enter to guess.
+1. The game selects a random word (represented by underscores `_`).
+2. You start with **6 attempts**.
+3. Type a letter and press Enter to guess:
     - **Correct Guess:** The letter is revealed in the word.
     - **Incorrect Guess:** You lose an attempt, and a part of the hangman is drawn.
-4.  [cite_start]**Win:** Guess the entire word before the drawing is complete[cite: 17].
-5.  [cite_start]**Lose:** run out of attempts (the stickman is fully drawn)[cite: 16].
+4. **Win:** Guess the entire word before the drawing is complete.
+5. **Lose:** Run out of attempts (the stickman is fully drawn).
+
+### Example Gameplay
+```bash
+$ ./Hangman_Bash_Game.sh
+Welcome to Terminal Hangman!
+
+_ _ _ _ _  # Hidden word example
+Guess a letter: a
+Incorrect! Lives left: 5
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========
+
+Guess a letter: e
+Correct!
+_ e _ _ _
+...
 
 ## 👥 Authors
 
